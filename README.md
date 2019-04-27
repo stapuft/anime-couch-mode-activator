@@ -11,8 +11,9 @@ to change the time that each button skips change the numbers in lines like this 
 
 if you have firefox to enable the auto fullscreen feature you have to go to about:config and change the value of "full-screen-api.allow-trusted-requests-only" from "true" to "false" and then install this like any other userscript
 
-    // ==UserScript==
-// @name         anime couch mode activator
+ both userscripts are needed for the full experiance, part one is the keyboard shortcuts
+// ==UserScript==
+// @name         anime couch mode activator-pard un-keyboard
 // @namespace    http://tampermonkey.net/
 // @version      1.6
 // @description  Adds extra keyboard shortcuts to html5 videos and automatically enters fullscreen
@@ -31,25 +32,13 @@ if you have firefox to enable the auto fullscreen feature you have to go to abou
 // @include      *://kissanime.ru/Anime/*
 // @include      *://kimcartoon.to/Cartoon/*
 // @include      *://streamp1ay.me/*
+// @include      http://*/*
+// @include      https://*/*
 // @grant        none
 // ==/UserScript==
 
 document.getElementsByTagName("video")[0].focus();
 
-var elem = document.getElementsByTagName("video")[0];
-if (elem.requestFullscreen) {
-  elem.requestFullscreen();
-} else if (elem.msRequestFullscreen) {
-  elem.msRequestFullscreen();
-} else if (elem.mozRequestFullScreen) {
-  elem.mozRequestFullScreen();
-} else if (elem.webkitRequestFullscreen) {
-  elem.webkitRequestFullscreen();
-}
-
-var myVideo = document.getElementsByTagName("video")[0];
-document.getElementsByTagName("video")[0].setAttribute("controls","controls");
-document.getElementsByTagName("video")[0].hover(function(){	myVideo.controls = !myVideo.controls; },5000);
 
 
 function rewind(element) {
@@ -96,12 +85,56 @@ window.addEventListener('keypress', (event)=>{
     }
 
 
-document.getElementsByTagName("video")[0].focus("video")[0];
-
 
 });
 
 &#x200B;
+
+
+and part 2 enables the fullscreen mode.
+
+// ==UserScript==
+// @name         anime couch mode activator-pard deux-fullscreen
+// @namespace    http://tampermonkey.net/
+// @version      1.6
+// @description  Adds extra keyboard shortcuts to html5 videos and automatically enters fullscreen
+// @author       Daehock
+// @Thanks       Skillrax  & v4lt5u
+// @include      *://www.rapidvideo.*
+// @include      *://mcloud.to/
+// @include      *://openload.*
+// @include      *://streamango.*
+// @include      *://prettyfast.to/*
+// @include      *://www.mp4upload.com/*
+// @include      *://9anime.ru/watch/*
+// @include      *://9anime.nl/watch/*
+// @include      *://9anime.to/watch/*
+// @include      *://9anime.live/watch/*
+// @include      *://kissanime.ru/Anime/*
+// @include      *://kimcartoon.to/Cartoon/*
+// @include      *://streamp1ay.me/*
+// @include      http://*/*
+// @include      https://*/*
+// @grant        none
+// ==/UserScript==
+
+
+var elem = document.getElementsByTagName("video")[0];
+if (elem.requestFullscreen) {
+  elem.requestFullscreen();
+} else if (elem.msRequestFullscreen) {
+  elem.msRequestFullscreen();
+} else if (elem.mozRequestFullScreen) {
+  elem.mozRequestFullScreen();
+} else if (elem.webkitRequestFullscreen) {
+  elem.webkitRequestFullscreen();
+}
+
+var myVideo = document.getElementsByTagName("video")[0];
+document.getElementsByTagName("video")[0].setAttribute("controls","controls");
+document.getElementsByTagName("video")[0].hover(function(){	myVideo.controls = !myVideo.controls; },5000);
+
+
 
 thanks to those who contributed time into this and helping me simplify it. if anyone needs help or has suggestions just let me know hope you enjoy this as much as i I will
 
