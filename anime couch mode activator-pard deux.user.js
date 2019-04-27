@@ -2,7 +2,7 @@
 // @name         anime couch mode activator-pard deux-fullscreen
 // @namespace    http://tampermonkey.net/
 // @version      1.7
-// @description  Adds extra keyboard shortcuts to html5 videos and automatically enters fullscreen
+// @description  Adds extra keyboard shortcuts to html5 videos and automatically enters fullscreen.
 // @author       Daehock
 // @Thanks       Skillrax  & v4lt5u
 // @include      *://www.rapidvideo.*
