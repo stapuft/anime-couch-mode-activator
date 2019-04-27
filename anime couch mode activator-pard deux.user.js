@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         anime couch mode activator-pard deux-fullscreen
 // @namespace    http://tampermonkey.net/
-// @version      1.6
+// @version      1.7
 // @description  Adds extra keyboard shortcuts to html5 videos and automatically enters fullscreen
 // @author       Daehock
 // @Thanks       Skillrax  & v4lt5u
@@ -18,8 +18,6 @@
 // @include      *://kissanime.ru/Anime/*
 // @include      *://kimcartoon.to/Cartoon/*
 // @include      *://streamp1ay.me/*
-// @include      http://*/*
-// @include      https://*/*
 // @grant        none
 // ==/UserScript==
 
@@ -35,7 +33,7 @@ if (elem.requestFullscreen) {
   elem.webkitRequestFullscreen();
 }
 
-var myVideo = document.getElementsByTagName("video")[0];
 document.getElementsByTagName("video")[0].setAttribute("controls","controls");
-document.getElementsByTagName("video")[0].hover(function(){	myVideo.controls = !myVideo.controls; },5000);
+
+document.getElementsByTagName("video")[0].click(("video")[0]);
 
