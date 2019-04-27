@@ -28,6 +28,8 @@ thanks to those who contributed time into this and helping me simplify it. if an
 
 
 if you feel brave you can always add
-// @include      http://*/*
-// @include      https://*/*
-in with the other @include lines, but ***/be warned/***, this may unintentionally break websites this script is not designed for.
+
+    // @include      http://*/*
+    // @include      https://*/*
+
+in with the other @include lines, but ***be warned***, this may unintentionally break websites this script is not designed for.
