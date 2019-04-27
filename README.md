@@ -27,3 +27,7 @@ if you have firefox to enable the auto fullscreen feature you have to go to abou
 thanks to those who contributed time into this and helping me simplify it. if anyone needs help or has suggestions just let me know hope you enjoy this as much as i I will
 
 
+if you feel brave you can always add
+// @include      http://*/*
+// @include      https://*/*
+in with the other @include lines, but ***/be warned/***, this may unintentionally break websites this script is not designed for.
